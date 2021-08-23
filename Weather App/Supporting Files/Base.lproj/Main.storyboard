@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mt0-53-GTJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Tab Bar Controller-->
+        <scene sceneID="DCY-Wg-Md2">
+            <objects>
+                <tabBarController id="Mt0-53-GTJ" customClass="CustomTabBarController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="N0r-0q-MDN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="bg-gradient-end"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="UhX-wM-9rL" kind="relationship" relationship="viewControllers" id="VRx-EA-hcL"/>
+                        <segue destination="Ts8-HY-bQj" kind="relationship" relationship="viewControllers" id="nwD-rp-BFo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfG-Y9-aqC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1514" y="524"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="uAw-JF-L4V">
+            <objects>
+                <navigationController id="UhX-wM-9rL" customClass="CustomNavigationController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Today" image="tab_today" id="kF7-su-50I"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="drp-u9-oeW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="bg-gradient-start"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Zk4-m1-04H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FsP-Qm-H5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="125"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TodayViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="View" customClass="GradientView" customModule="Weather_App" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyQ-Om-dIp" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sPZ-Rl-aA7">
+                                        <rect key="frame" x="0.0" y="56" width="414" height="541"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rNd-iJ-9uh">
+                                            <size key="itemSize" width="300" height="320"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayCollectionViewCell" id="t1a-HN-k1W" customClass="TodayCollectionViewCell" customModule="Weather_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="110.5" width="300" height="320"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fCh-xn-Ndm" customClass="GradientView" customModule="Weather_App" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="320"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pir-J5-6ce" userLabel="Main Stack View">
+                                                            <rect key="frame" x="85" y="16" width="130" height="128"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="WMf-nL-NBW" userLabel="Icon Image View">
+                                                                    <rect key="frame" x="33" y="0.0" width="64" height="64"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="WMf-nL-NBW" secondAttribute="height" multiplier="1:1" id="K8T-gj-1Jh"/>
+                                                                        <constraint firstAttribute="height" constant="64" id="bbJ-qk-PRe"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KT1-Qn-jWd" userLabel="City Name Label">
+                                                                    <rect key="frame" x="21" y="70" width="88" height="23"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUM-pC-rIL" userLabel="Temperature Label">
+                                                                    <rect key="frame" x="0.0" y="99" width="130" height="29"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                    <color key="textColor" name="AccentColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="128" id="IeW-y7-Anz"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s4G-Sm-BES" userLabel="Separator View">
+                                                            <rect key="frame" x="102" y="159" width="96" height="2"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="2" id="L9b-d8-0mE"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hxh-lU-HW4" userLabel="Details Stack View">
+                                                            <rect key="frame" x="30" y="170" width="240" height="140"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Khf-ji-KY7" userLabel="Cloudiness Detail View" customClass="TodayDetailView" customModule="Weather_App" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="35"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="35" id="d7r-fQ-laF"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="raining"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Cloudiness"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="value" value="-"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Nd-mC-PZa" userLabel="Humidity Detail View" customClass="TodayDetailView" customModule="Weather_App" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="35" width="240" height="35"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="drop"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Humidity"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="value" value="-"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdP-f1-CzU" userLabel="Wind Speed Detail View" customClass="TodayDetailView" customModule="Weather_App" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="70" width="240" height="35"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="wind"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Wind Speed"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="value" value="-"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2H-yJ-r86" userLabel="Wind Direction Detail View" customClass="TodayDetailView" customModule="Weather_App" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="105" width="240" height="35"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="icon" value="compass"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="detail" value="Wind Direction"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="value" value="-"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="pir-J5-6ce" firstAttribute="centerY" secondItem="fCh-xn-Ndm" secondAttribute="centerY" multiplier="0.5" id="3I0-Hb-jH2"/>
+                                                        <constraint firstItem="hxh-lU-HW4" firstAttribute="leading" secondItem="fCh-xn-Ndm" secondAttribute="leading" constant="30" id="7Ag-O6-JPD"/>
+                                                        <constraint firstItem="hxh-lU-HW4" firstAttribute="centerY" secondItem="fCh-xn-Ndm" secondAttribute="centerY" multiplier="1.5" id="CoW-IY-EeC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hxh-lU-HW4" secondAttribute="trailing" constant="30" id="MZq-hd-Ecf"/>
+                                                        <constraint firstItem="s4G-Sm-BES" firstAttribute="centerX" secondItem="fCh-xn-Ndm" secondAttribute="centerX" id="NI3-bC-cnR"/>
+                                                        <constraint firstItem="s4G-Sm-BES" firstAttribute="centerY" secondItem="fCh-xn-Ndm" secondAttribute="centerY" id="NyJ-lA-nfh"/>
+                                                        <constraint firstItem="s4G-Sm-BES" firstAttribute="width" secondItem="fCh-xn-Ndm" secondAttribute="width" multiplier="0.32" id="P43-NY-z6M"/>
+                                                        <constraint firstItem="pir-J5-6ce" firstAttribute="centerX" secondItem="fCh-xn-Ndm" secondAttribute="centerX" id="VdX-Ne-1U5"/>
+                                                        <constraint firstItem="hxh-lU-HW4" firstAttribute="centerX" secondItem="fCh-xn-Ndm" secondAttribute="centerX" id="YNX-sN-E6Z"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" name="blue-gradient-start"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" name="blue-gradient-end"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="300" height="320"/>
+                                                <connections>
+                                                    <outlet property="cityNameLabel" destination="KT1-Qn-jWd" id="zF0-cw-bPl"/>
+                                                    <outlet property="cloudinessDetailView" destination="Khf-ji-KY7" id="hx3-jV-DG1"/>
+                                                    <outlet property="humidityDetailView" destination="7Nd-mC-PZa" id="frH-s7-raH"/>
+                                                    <outlet property="temperatureLabel" destination="NUM-pC-rIL" id="6zZ-jM-jOB"/>
+                                                    <outlet property="windDirectionDetailView" destination="R2H-yJ-r86" id="nPp-Ds-RBY"/>
+                                                    <outlet property="windSpeedDetailView" destination="xdP-f1-CzU" id="8JM-L9-5tP"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzU-WN-vPC" userLabel="Plus">
+                                        <rect key="frame" x="171" y="624.5" width="72" height="68.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="72" id="3J3-3f-tbe"/>
+                                            <constraint firstAttribute="width" secondItem="vzU-WN-vPC" secondAttribute="height" multiplier="1.05:1" id="PUq-aC-TLw"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="plusTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXx-Fe-2qz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vzU-WN-vPC" firstAttribute="centerX" secondItem="GyQ-Om-dIp" secondAttribute="centerX" id="OPj-sU-9JL"/>
+                                    <constraint firstAttribute="bottom" secondItem="vzU-WN-vPC" secondAttribute="bottom" constant="32" id="cc3-N8-fxB"/>
+                                    <constraint firstAttribute="bottom" secondItem="sPZ-Rl-aA7" secondAttribute="bottom" constant="128" id="kar-WD-y1a"/>
+                                    <constraint firstItem="sPZ-Rl-aA7" firstAttribute="leading" secondItem="GyQ-Om-dIp" secondAttribute="leading" id="pE0-mR-uk9"/>
+                                    <constraint firstAttribute="trailing" secondItem="sPZ-Rl-aA7" secondAttribute="trailing" id="u1D-PH-KuO"/>
+                                    <constraint firstItem="sPZ-Rl-aA7" firstAttribute="top" secondItem="GyQ-Om-dIp" secondAttribute="top" constant="56" id="yl8-pM-2bp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GyQ-Om-dIp" secondAttribute="trailing" id="Kim-jQ-3Dg"/>
+                            <constraint firstItem="GyQ-Om-dIp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U5j-9T-Jt6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GyQ-Om-dIp" secondAttribute="bottom" id="lAL-uk-ViQ"/>
+                            <constraint firstItem="GyQ-Om-dIp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="trC-c7-xJw"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" name="bg-gradient-start"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" name="bg-gradient-end"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="Today" id="P2T-dE-Uom">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.clockwise" catalog="system" id="JIW-x3-WNH">
+                            <connections>
+                                <action selector="refreshTapped" destination="BYZ-38-t0r" id="gM4-qg-YNu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="sPZ-Rl-aA7" id="lfZ-ms-Dj9"/>
+                        <outlet property="contentView" destination="GyQ-Om-dIp" id="hOH-3h-wdn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.971014492753625" y="124.55357142857142"/>
+        </scene>
+        <!--Forecast-->
+        <scene sceneID="qc7-VY-V4M">
+            <objects>
+                <navigationController id="Ts8-HY-bQj" customClass="CustomNavigationController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Forecast" image="tab_forecast" id="7dv-rx-mRB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="3Dt-HM-bUG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="bg-gradient-start"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zaX-zA-80i" kind="relationship" relationship="rootViewController" id="yhg-gN-Mym"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gFs-7w-mEX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="931"/>
+        </scene>
+        <!--Forecast-->
+        <scene sceneID="UaK-VC-Vi3">
+            <objects>
+                <viewController id="zaX-zA-80i" customClass="ForecastViewController" customModule="Weather_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hPO-I6-541" customClass="GradientView" customModule="Weather_App" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="2go-dk-R1w">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zaX-zA-80i" id="Jjk-tP-6og"/>
+                                    <outlet property="delegate" destination="zaX-zA-80i" id="b75-fq-0ms"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VB0-g4-pwg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VB0-g4-pwg" firstAttribute="trailing" secondItem="2go-dk-R1w" secondAttribute="trailing" id="cHw-nc-jjd"/>
+                            <constraint firstItem="2go-dk-R1w" firstAttribute="leading" secondItem="VB0-g4-pwg" secondAttribute="leading" id="mFb-oH-RPf"/>
+                            <constraint firstItem="VB0-g4-pwg" firstAttribute="bottom" secondItem="2go-dk-R1w" secondAttribute="bottom" id="ye4-MP-AKC"/>
+                            <constraint firstItem="2go-dk-R1w" firstAttribute="top" secondItem="VB0-g4-pwg" secondAttribute="top" id="zSv-kt-mK2"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" name="bg-gradient-start"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" name="bg-gradient-end"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="Forecast" id="z4J-S2-ebu">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.clockwise" catalog="system" id="txa-Wd-5aS">
+                            <connections>
+                                <action selector="refreshTapped" destination="zaX-zA-80i" id="ZmM-sx-LbD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2go-dk-R1w" id="5yw-of-h0p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwi-Wm-ZdR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="931"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="compass" width="612" height="612"/>
+        <image name="drop" width="294" height="294"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="raining" width="384" height="384"/>
+        <image name="sun" width="227" height="227"/>
+        <image name="tab_forecast" width="25" height="25"/>
+        <image name="tab_today" width="30" height="29"/>
+        <image name="wind" width="296" height="296"/>
+        <namedColor name="AccentColor">
+            <color red="0.9882352941176471" green="0.91764705882352937" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bg-gradient-end">
+            <color red="0.24705882352941178" green="0.32549019607843138" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bg-gradient-start">
+            <color red="0.40000000000000002" green="0.51372549019607838" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blue-gradient-end">
+            <color red="0.45098039215686275" green="0.69019607843137254" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blue-gradient-start">
+            <color red="0.67843137254901964" green="0.77647058823529413" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

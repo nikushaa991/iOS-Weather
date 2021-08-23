@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddCityViewController" customModule="Weather_App" customModuleProvider="target">
+            <connections>
+                <outlet property="addCityView" destination="Q2n-gW-9Wl" id="pdc-fT-yI5"/>
+                <outlet property="inputTextField" destination="eUs-Qr-CZA" id="3F9-TJ-hfn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVm-8b-D4M">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dU5-Qs-Zvj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kN-HQ-v4z" userLabel="Background Button">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <action selector="backgroundButtonTapped" destination="-1" eventType="touchUpInside" id="Nes-ZI-qWt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2n-gW-9Wl" userLabel="Add City View" customClass="GradientView" customModule="Weather_App" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="313.5" width="331" height="269"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zDc-vJ-1ro">
+                                        <rect key="frame" x="49" y="40" width="233.5" height="189"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQ9-Pv-COh" userLabel="Add City">
+                                                <rect key="frame" x="79" y="0.0" width="75" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter City name you wish to add" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V30-SN-xcz" userLabel="Enter City">
+                                                <rect key="frame" x="0.0" y="38.5" width="233.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUs-Qr-CZA" userLabel="Input Text Field">
+                                                <rect key="frame" x="11.5" y="72" width="210" height="34"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvQ-JA-hpw">
+                                                <rect key="frame" x="80.5" y="120.5" width="72" height="68.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="JvQ-JA-hpw" secondAttribute="height" multiplier="1.05:1" id="31V-rr-I8I"/>
+                                                    <constraint firstAttribute="width" constant="72" id="kM0-uh-Hg8"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="addTapped" destination="-1" eventType="touchUpInside" id="Mw3-tp-9JK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="eUs-Qr-CZA" firstAttribute="width" secondItem="zDc-vJ-1ro" secondAttribute="width" multiplier="0.9" id="WFX-IX-GI8"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zDc-vJ-1ro" firstAttribute="centerX" secondItem="Q2n-gW-9Wl" secondAttribute="centerX" id="IxB-da-NlG"/>
+                                    <constraint firstItem="zDc-vJ-1ro" firstAttribute="top" secondItem="Q2n-gW-9Wl" secondAttribute="top" constant="40" id="Qgh-1b-pOd"/>
+                                    <constraint firstItem="zDc-vJ-1ro" firstAttribute="centerY" secondItem="Q2n-gW-9Wl" secondAttribute="centerY" id="qYF-Dp-Tm2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" name="green-gradient-start"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" name="green-gradient-end"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6kN-HQ-v4z" secondAttribute="bottom" id="2Wd-FO-oRP"/>
+                            <constraint firstAttribute="trailing" secondItem="6kN-HQ-v4z" secondAttribute="trailing" id="4aJ-vI-xJC"/>
+                            <constraint firstItem="6kN-HQ-v4z" firstAttribute="leading" secondItem="dU5-Qs-Zvj" secondAttribute="leading" id="8cx-iz-rYy"/>
+                            <constraint firstItem="Q2n-gW-9Wl" firstAttribute="width" secondItem="dU5-Qs-Zvj" secondAttribute="width" multiplier="0.8" id="JQH-Kd-iPk"/>
+                            <constraint firstItem="Q2n-gW-9Wl" firstAttribute="centerY" secondItem="dU5-Qs-Zvj" secondAttribute="centerY" id="Nuk-ea-ked"/>
+                            <constraint firstItem="Q2n-gW-9Wl" firstAttribute="height" secondItem="dU5-Qs-Zvj" secondAttribute="height" multiplier="0.3" id="OMu-lN-7Nm"/>
+                            <constraint firstItem="6kN-HQ-v4z" firstAttribute="top" secondItem="dU5-Qs-Zvj" secondAttribute="top" id="QIz-Q7-jY6"/>
+                            <constraint firstItem="Q2n-gW-9Wl" firstAttribute="centerX" secondItem="dU5-Qs-Zvj" secondAttribute="centerX" id="hfe-2d-ay7"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZVm-8b-D4M" secondAttribute="bottom" id="A6H-e6-KIO"/>
+                <constraint firstItem="ZVm-8b-D4M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BmM-0o-LSN"/>
+                <constraint firstItem="ZVm-8b-D4M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QwD-sv-Lh5"/>
+                <constraint firstAttribute="trailing" secondItem="ZVm-8b-D4M" secondAttribute="trailing" id="erk-La-W9w"/>
+            </constraints>
+            <point key="canvasLocation" x="-51" y="117"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="green-gradient-end">
+            <color red="0.23600000143051147" green="0.67299997806549072" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green-gradient-start">
+            <color red="0.5" green="0.87699997425079346" blue="0.68999999761581421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
